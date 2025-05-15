@@ -1,12 +1,12 @@
 import express from 'express';
-import cors from 'cors';  // Assure-toi d'importer cors ici
-import { pool } from './db';  // Ou le fichier où tu as configuré ta base de données
+import cors from 'cors'; 
+import { pool } from './db';  
 
 const app = express();
 const port = 3000;
 
-// Utilise CORS globalement dans ton application
-app.use(cors());  // Ajoute cette ligne pour activer CORS
+
+app.use(cors()); 
 
 app.get('/api/products', async (req, res) => {
   try {
